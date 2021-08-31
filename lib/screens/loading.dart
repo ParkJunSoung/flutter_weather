@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_weather/data/my_location.dart';
 import 'package:flutter_weather/data/network.dart';
-
+import 'package:flutter_weather/screens/weather_screen.dart';
 
 const apikey = '671453abc3e5dbc58306e39dfc08c0d8';
 
@@ -15,24 +15,26 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   double? longitude2;
   double? latitude2;
-  //사용자 동의 구하고 위치 좌표 받아오기
 
   void getLocation() async {
     MyLocation myLocation = MyLocation();
     await myLocation.MyLocationData();
     longitude2 = myLocation.longitude;
     latitude2 = myLocation.latitude;
-    Network network = Network('https://api.openweathermap.org/data/2.5/weather?lat=$latitude2&lon=$longitude2&appid=$apikey');
+    Network network = Network(
+      'https://api.openweathermap.org/data/2.5/weather?lat=$latitude2&lon=$longitude2&appid=$apikey&units=metric&lang=kr',
+    );
     var weatherData = await network.getJsonData();
     print(weatherData);
-  }
+    print(longitude2);
+    print(latitude2);
 
-  // void fetchData() async {
-  //
-  //     var myJson = parsingData['weather'][0]['description'];
-  //     print(myJson);
-  //   }
-  // }
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) =>
+                WeatherScreen(parseWeatherData: weatherData)));
+  }
 
   @override
   void initState() {
