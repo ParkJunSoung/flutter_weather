@@ -23,8 +23,10 @@ class _LoadingState extends State<Loading> {
     latitude2 = myLocation.latitude;
     Network network = Network(
       'https://api.openweathermap.org/data/2.5/weather?lat=$latitude2&lon=$longitude2&appid=$apikey&units=metric&lang=kr',
-    );
+        'http://api.openweathermap.org/data/2.5/air_pollution?lat=$latitude2&lon=$longitude2&appid=$apikey');
     var weatherData = await network.getJsonData();
+    var airData = await network.getAirData();
+    print(airData);
     print(weatherData);
     print(longitude2);
     print(latitude2);
@@ -33,7 +35,7 @@ class _LoadingState extends State<Loading> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-                WeatherScreen(parseWeatherData: weatherData)));
+                WeatherScreen(parseWeatherData: weatherData,parseAirData: airData,)));
   }
 
   @override
@@ -47,7 +49,7 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('날씨'),
+        title: Text('local weather'),
       ),
       body: Center(
         child: ElevatedButton(
