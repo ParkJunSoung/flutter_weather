@@ -15,12 +15,12 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+  Model model = Model();
   String? cityName;
   String? country;
   double? temp;
   int? temp2;
   Widget? icon;
-  Model model = Model();
   Widget? air;
   DateTime time = DateTime.now();
   double? pm10;
@@ -44,6 +44,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     pm10 = airData['list'][0]['components']['pm10'];
     air = model.getAirIcon(index);
     timedate = DateFormat.yMMMd('en_US').format(time);
+    print(condition);
   }
 
   @override
@@ -64,6 +65,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
         Text(
           '${temp2}℃',
           style: TextStyle(fontSize: 70),
+        ),
+        Row(
+          children: [
+            Container(
+              child: icon,
+            ),
+            Text('60%'),
+          ],
         ),
         Container(
           height: 1,
