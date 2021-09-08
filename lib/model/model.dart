@@ -19,12 +19,12 @@ class Model {
     } else if (condition <= 700) {
       //먼지 안개
       return SvgPicture.asset('sgv/Cloud-Fog-Alt.svg', color: Colors.black);
-    } else if (condition <= 800) {
+    } else if (condition >= 800) {
       //구름
-      return SvgPicture.asset('sgv/Cloud.svg', color: Colors.black);
+      return SvgPicture.asset('sgv/Cloud.svg', color: Colors.black,fit: BoxFit.cover);
     } else if (condition == 800) {
       //햇살
-      return SvgPicture.asset('sgv/Sun.svg', color: Colors.black);
+      return SvgPicture.asset('sgv/Sun.svg', color: Colors.black,);
     }
   }
 

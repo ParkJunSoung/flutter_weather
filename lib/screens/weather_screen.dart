@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_weather/model/model.dart';
 import 'package:intl/intl.dart';
 
@@ -59,21 +59,20 @@ class _WeatherScreenState extends State<WeatherScreen> {
         SizedBox(
           height: 20,
         ),
-        SizedBox(
-          width: 30,
-        ),
         Text(
           '${temp2}℃',
           style: TextStyle(fontSize: 70),
         ),
-        Row(
-          children: [
-            Container(
-              child: icon,
-            ),
-            Text('60%'),
-          ],
-        ),
+       Row(
+         children: [
+           SizedBox(
+             child: icon,
+           ),
+           Text('60%'),
+         ],
+       ),
+
+
         Container(
           height: 1,
           width: 350,
