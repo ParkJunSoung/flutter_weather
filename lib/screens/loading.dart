@@ -34,8 +34,10 @@ class _LoadingState extends State<Loading> {
     Navigator.push(
         context,
         MaterialPageRoute(
-            builder: (context) =>
-                WeatherScreen(parseWeatherData: weatherData,parseAirData: airData,)));
+            builder: (context) => WeatherScreen(
+                  parseWeatherData: weatherData,
+                  parseAirData: airData,
+                )));
   }
 
   @override
@@ -55,7 +57,8 @@ class _LoadingState extends State<Loading> {
         backgroundColor: Colors.brown[200],
         title: Text(
           '우리동네 날씨',
-          style: TextStyle(color: Colors.grey[100],fontWeight: FontWeight.bold),
+          style:
+              TextStyle(color: Colors.grey[100], fontWeight: FontWeight.bold),
         ),
       ),
       body: Center(
@@ -85,7 +88,10 @@ class _LoadingState extends State<Loading> {
                       },
                       child: Text(
                         '우리동네 날씨 보기',
-                        style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

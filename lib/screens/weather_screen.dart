@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_weather/model/model.dart';
 import 'package:intl/intl.dart';
@@ -56,23 +55,48 @@ class _WeatherScreenState extends State<WeatherScreen> {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Row(
+          children: [
+            SizedBox(
+              width: 55,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.brown,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 200,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.brown,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
         Stack(
           children: [
-            // Row(
-            //   children: [
-            //     Container(
-            //       width: 50,
-            //       height: 50,
-            //       color: Colors.brown,
-            //     ),
-            //     SizedBox(width: 200,),
-            //     Container(
-            //       width: 50,
-            //       height: 50,
-            //       color: Colors.brown,
-            //     ),
-            //   ],
-            // ),
             Container(
               child: Column(
                 children: [
@@ -136,19 +160,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       offset: Offset(0, 3), // changes position of shadow
                     ),
                   ],
-                  color: Colors.brown[120]),
+                  color: Colors.brown[200]),
               width: 300,
-              height: 320,
+              height: 350,
             ),
           ],
         ),
         SizedBox(
-          height: 30,
-        ),
-        Container(
-          height: 1,
-          width: 370,
-          color: Colors.black,
+          height: 50,
         ),
         Container(
           child: Row(

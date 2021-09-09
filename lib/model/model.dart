@@ -21,10 +21,14 @@ class Model {
       return SvgPicture.asset('sgv/Cloud-Fog-Alt.svg', color: Colors.black);
     } else if (condition >= 800) {
       //구름
-      return SvgPicture.asset('sgv/Cloud.svg', color: Colors.black,fit: BoxFit.cover);
+      return SvgPicture.asset('sgv/Cloud.svg',
+          color: Colors.black, fit: BoxFit.cover);
     } else if (condition == 800) {
       //햇살
-      return SvgPicture.asset('sgv/Sun.svg', color: Colors.black,);
+      return SvgPicture.asset(
+        'sgv/Sun.svg',
+        color: Colors.black,
+      );
     }
   }
 
@@ -32,51 +36,41 @@ class Model {
     if (index == 1) {
       return Column(
         children: [
-          SizedBox(
-              height: 50,
-              width: 50,
-              child: Image.asset('image/good.png')),
-          Text('좋음',style: TextStyle(fontWeight: FontWeight.bold))
+          SizedBox(height: 50, width: 50, child: Image.asset('image/good.png')),
+          Text('좋음', style: TextStyle(fontWeight: FontWeight.bold))
         ],
       );
     } else if (index == 2) {
       return Column(
         children: [
           SizedBox(
-              height: 50,
-              width: 50,
-              child: Image.asset('image/normal.png')),
-          Text('보통',style: TextStyle(fontWeight: FontWeight.bold)),
+              height: 50, width: 50, child: Image.asset('image/normal.png')),
+          Text('보통', style: TextStyle(fontWeight: FontWeight.bold)),
         ],
       );
     } else if (index == 3) {
       return Column(
         children: [
           SizedBox(
-              height: 50,
-              width: 50,
-              child: Image.asset('image/normal.png')),
-          Text('보통',style: TextStyle(fontWeight: FontWeight.bold))
+              height: 50, width: 50, child: Image.asset('image/normal.png')),
+          Text('보통', style: TextStyle(fontWeight: FontWeight.bold))
         ],
       );
     } else if (index == 4) {
       return Column(
         children: [
-          SizedBox(
-              height: 50,
-              width: 50,
-              child: Image.asset('image/bad.png')),
-          Text('나쁨',style: TextStyle(fontWeight: FontWeight.bold))
+          SizedBox(height: 50, width: 50, child: Image.asset('image/bad.png')),
+          Text('나쁨', style: TextStyle(fontWeight: FontWeight.bold))
         ],
       );
     } else if (index == 5) {
       return Column(
         children: [
-          SizedBox(
-              height: 50,
-              width: 50,
-              child: Image.asset('image/bad.png')),
-          Text('매우나쁨',style: TextStyle(fontWeight: FontWeight.bold),),
+          SizedBox(height: 50, width: 50, child: Image.asset('image/bad.png')),
+          Text(
+            '매우나쁨',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ],
       );
     }
