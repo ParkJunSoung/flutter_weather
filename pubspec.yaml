@@ -33,7 +33,7 @@ dependencies:
   flutter_svg: ^0.22.0
   intl: ^0.17.0
   flutter_weather_bg_null_safety: ^1.0.0
-
+  fl_chart: ^0.40.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

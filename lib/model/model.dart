@@ -32,36 +32,51 @@ class Model {
     if (index == 1) {
       return Column(
         children: [
-          Text('😀',style: TextStyle(fontSize: 50),),
-          Text('Good'),
+          SizedBox(
+              height: 50,
+              width: 50,
+              child: Image.asset('image/good.png')),
+          Text('좋음',style: TextStyle(fontWeight: FontWeight.bold))
         ],
       );
     } else if (index == 2) {
       return Column(
         children: [
-          Text('🙂',style: TextStyle(fontSize: 50),),
-          Text('Normal'),
+          SizedBox(
+              height: 50,
+              width: 50,
+              child: Image.asset('image/normal.png')),
+          Text('보통',style: TextStyle(fontWeight: FontWeight.bold)),
         ],
       );
     } else if (index == 3) {
       return Column(
         children: [
-          Text('🙂',style: TextStyle(fontSize: 50),),
-          Text('Normal'),
+          SizedBox(
+              height: 50,
+              width: 50,
+              child: Image.asset('image/normal.png')),
+          Text('보통',style: TextStyle(fontWeight: FontWeight.bold))
         ],
       );
     } else if (index == 4) {
       return Column(
         children: [
-          Text('🤐',style: TextStyle(fontSize: 50),),
-          Text('Bad'),
+          SizedBox(
+              height: 50,
+              width: 50,
+              child: Image.asset('image/bad.png')),
+          Text('나쁨',style: TextStyle(fontWeight: FontWeight.bold))
         ],
       );
     } else if (index == 5) {
       return Column(
         children: [
-          Text('😷',style: TextStyle(fontSize: 50)),
-          Text('Very Bad'),
+          SizedBox(
+              height: 50,
+              width: 50,
+              child: Image.asset('image/bad.png')),
+          Text('매우나쁨',style: TextStyle(fontWeight: FontWeight.bold),),
         ],
       );
     }
