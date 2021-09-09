@@ -37,7 +37,7 @@ class Model {
       return Column(
         children: [
           SizedBox(height: 50, width: 50, child: Image.asset('image/good.png')),
-          Text('좋음', style: TextStyle(fontWeight: FontWeight.bold))
+          Text('좋음', style: TextStyle(fontFamily: 'Jua_Regular'))
         ],
       );
     } else if (index == 2) {
@@ -45,7 +45,7 @@ class Model {
         children: [
           SizedBox(
               height: 50, width: 50, child: Image.asset('image/normal.png')),
-          Text('보통', style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('보통', style: TextStyle(fontFamily: 'Jua_Regular')),
         ],
       );
     } else if (index == 3) {
@@ -53,14 +53,14 @@ class Model {
         children: [
           SizedBox(
               height: 50, width: 50, child: Image.asset('image/normal.png')),
-          Text('보통', style: TextStyle(fontWeight: FontWeight.bold))
+          Text('보통', style: TextStyle(fontFamily: 'Jua_Regular'))
         ],
       );
     } else if (index == 4) {
       return Column(
         children: [
           SizedBox(height: 50, width: 50, child: Image.asset('image/bad.png')),
-          Text('나쁨', style: TextStyle(fontWeight: FontWeight.bold))
+          Text('나쁨', style: TextStyle(fontFamily: 'Jua_Regular'))
         ],
       );
     } else if (index == 5) {
@@ -69,7 +69,7 @@ class Model {
           SizedBox(height: 50, width: 50, child: Image.asset('image/bad.png')),
           Text(
             '매우나쁨',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontFamily: 'Jua_Regular'),
           ),
         ],
       );

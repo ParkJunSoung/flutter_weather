@@ -58,7 +58,7 @@ class _LoadingState extends State<Loading> {
         title: Text(
           '우리동네 날씨',
           style:
-              TextStyle(color: Colors.grey[100], fontWeight: FontWeight.bold),
+              TextStyle(color: Colors.grey[100], fontFamily: 'Jua_Regular'),
         ),
       ),
       body: Center(
@@ -80,7 +80,7 @@ class _LoadingState extends State<Loading> {
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
-                              side: BorderSide(color: Colors.white)),
+                             ),
                         ),
                       ),
                       onPressed: () {
@@ -90,8 +90,7 @@ class _LoadingState extends State<Loading> {
                         '우리동네 날씨 보기',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
+                        fontFamily: 'Jua_Regular', fontSize: 16,),
                       ),
                     ),
                   ),

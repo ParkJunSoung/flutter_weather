@@ -13,7 +13,7 @@ class MyLocation {
       latitude = position.latitude;
       longitude = position.longitude;
     } catch (e) {
-      Text('인터넷이 불안정 합니다.');
+      Text('인터넷이 불안정 합니다.',style: TextStyle(fontFamily: 'GyeonggiMedium', fontSize: 15),);
     }
   }
 }

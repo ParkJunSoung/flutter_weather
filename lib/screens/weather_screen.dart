@@ -105,12 +105,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ),
                   Text(
                     '$cityName',
-                    style: TextStyle(fontSize: 25),
+                    style: TextStyle(fontSize: 25,fontFamily: 'Jua_Regular'),
                   ),
-                  Text('$timedate'),
+                  Text('$timedate',style: TextStyle(fontFamily: 'Jua_Regular'),),
                   Text(
                     '${temp2}℃',
-                    style: TextStyle(fontSize: 70),
+                    style: TextStyle(fontSize: 70,fontFamily: 'Jua_Regular'),
                   ),
                   Container(width: 50, height: 80, child: icon),
                   Column(
@@ -120,10 +120,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         children: [
                           Text(
                             '풍속',
-                            style: TextStyle(fontSize: 17),
+                            style: TextStyle(fontSize: 17, fontFamily: 'Jua_Regular'),
                           ),
-                          Text('     습도', style: TextStyle(fontSize: 17)),
-                          Text('구름', style: TextStyle(fontSize: 17)),
+                          Text('     습도', style: TextStyle(fontSize: 17, fontFamily: 'Jua_Regular')),
+                          Text('구름', style: TextStyle(fontSize: 17, fontFamily: 'Jua_Regular')),
                         ],
                       ),
                       Row(
@@ -162,7 +162,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ],
                   color: Colors.brown[200]),
               width: 300,
-              height: 350,
+              height: 370,
             ),
           ],
         ),
@@ -180,7 +180,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ),
                   Text(
                     'AIQ(대기질지수)',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontFamily: 'Jua_Regular'),
                   ),
                   SizedBox(
                     child: air,
@@ -191,7 +191,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 children: [
                   Text(
                     '미세먼지',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontFamily: 'Jua_Regular'),
                   ),
                   Text('(pm10)', style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(
@@ -208,7 +208,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 children: [
                   Text(
                     '초미세먼지',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontFamily: 'Jua_Regular'),
                   ),
                   Text('(pm2_5)',
                       style: TextStyle(fontWeight: FontWeight.bold)),
